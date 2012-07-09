@@ -1,0 +1,58 @@
+<h1><%= @output_survey.id %></h1>
+
+<h2>1. Benutzen Sie eine Colloboration/ Projektmanagement Plattform?</h2>
+<p>Antwort: 
+	<%= @output_survey.use_collab_tool %>
+</p>
+
+<h2>2. Nutzen Sie eine der folgenden Colloboration/ Projektmanagement Plattformen? (Mehrfachnennungen möglich)</h2>
+<p>Antwort: 
+	<%= @output_survey.use_one_of_collab_tools %>
+</p>
+
+<h2>3. Ich benutze noch folgende Software:</h2>
+<p>Antwort: 
+	<%= @output_survey.using_another_collab_tool %>
+</p>
+
+<h2>4. Wie zufrieden sind Sie mit Ihrer/ Ihren Colloboration/ Projektmanagement Platt- form(en)?</h2>
+<p>Antwort: 
+	<%= OutputSurvey::Assessment.index(@output_survey.pleased_with_collab_tool) %>
+</p>
+
+<h2>5. Benutzen Sie eines der folgenden Tools?</h2>
+<p>Antwort: 
+	<%= @output_survey.using_one_of_tools %>
+</p>
+
+<h2>6. Welche Tools sollte One Spark Ihrer Meinung nach noch unterstützen?</h2>
+<p>Antwort: 
+	<%= @output_survey.desired_tool %>
+</p>
+
+<h2>7. Wie bewerten Sie das Konzept und die bisherige Umsetzung von Onespark?</h2>
+<p>Antwort: 
+	<%= OutputSurvey::Rate.index(@output_survey.rate_onespark) %>
+</p>
+
+<h2>8. Was ist Ihr besonderer Kritikpunt an One Spark? (positiv oder negativ)</h2>
+<p>Antwort: 
+	<%= @output_survey.private_censure_onespark %>
+</p>
+
+<h2>9. Was fehlt Ihnen bei Ihrer Projektorganisation oder was sollte sich verbessern? (Platz für Anregungen zu One Spark)</h2>
+<p>Antwort: 
+	<%= @output_survey.lack_in_own_pm %>
+</p>
+
+<h2>10. Beschreiben Sie Ihre Tätigkeit!</h2>
+<p>Antwort: 
+	<%= @output_survey.age %>
+</p>
+
+<h2>11. Wie alt sind Sie?</h2>
+<p>Antwort: 
+	<%= OutputSurvey::Activity.index(@output_survey.activity) %>
+</p>
+
+<%= link_to 'Back', output_surveys_path %>

@@ -1,0 +1,37 @@
+form {
+	padding-top: .375em;
+	fieldset {
+		margin-bottom: .375em;
+	}
+	input {
+		display:block;
+	}
+	label {
+		width: 25em;
+		margin-top:1em;
+		border:1px solid $toolbarGrey;
+		padding: 1em 1em;
+		margin: 0 .5em;
+		cursor:pointer;
+		display:block;
+		float:left;
+		background: $sidebarGrey url(../assets/img/head-add.png) no-repeat 100% 50%;
+		@include transition(background-color, .2s, ease-in-out);
+		&:hover{
+			background-color: $sidebarGreySeperator;
+		}
+	}
+	input[type="submit"], input[type = "radio"]{
+		float:left;
+	}
+	.details {
+		display:none;
+	}
+	textarea{
+		height:8em;
+	}
+	.cancelButton{	
+		float:left;
+		display:block;
+	}
+}

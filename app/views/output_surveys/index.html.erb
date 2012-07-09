@@ -1,0 +1,9 @@
+<h1>Listing Surveys</h1>
+
+<% @output_surveys.each do |survey| %>
+  <%= survey.id %>
+  <%= link_to 'Show', survey %>
+
+<% end %>
+
+
